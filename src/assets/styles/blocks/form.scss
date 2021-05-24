@@ -1,0 +1,70 @@
+.form {
+
+    &__row {
+        display: flex;
+        margin-bottom: rem(24px);
+
+        @include laptop {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        border-radius: rem(10px);
+        margin-right: rem(16px);
+        outline: none;
+        border: rem(2px) solid transparent;
+        font-size: rem(14px);
+        flex: 3;
+        text-indent: rem(20px);
+
+        @include laptop {
+            margin-right: rem(0px);
+            margin-bottom: rem(20px);
+            padding: 20px 0;
+        }
+    }
+
+    &__input:focus {
+        border: rem(2px) solid $blue;
+    }
+
+    &__controll {
+        display: flex;
+        justify-content: flex-start;
+
+        @include phones {
+            justify-content: center;
+        }
+    }
+
+    &__label {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    &__check {
+        display: none;
+    }
+
+    &__check:checked~&__check-visible {
+        background: url('/src/assets/images/check.png') center center/ 75% no-repeat;
+        background-color: $blue;
+        transition: background-color .3s;
+    }
+
+    &__check-visible {
+        width: rem(18px);
+        height: rem(18px);
+        background-color: $white;
+        border-radius: rem(3px);
+        margin-right: rem(22px);
+        transition: background-color .3s;
+    }
+
+    &__text {
+        font-size: rem(14px);
+        user-select: none;
+    }
+}

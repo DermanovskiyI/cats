@@ -1,0 +1,61 @@
+.header {
+    background: url("/src/assets/images/header.png") center center /cover no-repeat;
+    padding: rem(43px) rem(10px) rem(44px) rem(10px);
+
+    &__rows {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__up,
+    &__down {
+        flex: 1;
+        color: white;
+        display: flex;
+    }
+
+    &__up {
+        margin-bottom: rem(60px);
+
+        @include laptop {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    &__down {
+        @include laptop {
+            justify-content: center;
+        }
+    }
+
+    &__up-right,
+    &__up-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &__up-left {
+        @include laptop {
+            justify-content: space-between;
+        }
+    }
+
+    &__up-right {
+        display: flex;
+        justify-content: flex-end;
+
+        @include laptop {
+            display: none;
+        }
+    }
+
+    &__text {
+        font-size: rem(38px);
+        font-weight: 700;
+
+        @include laptop {
+            font-size: rem(28px);
+        }
+    }
+}

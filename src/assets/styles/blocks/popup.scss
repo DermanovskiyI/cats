@@ -1,0 +1,16 @@
+.popup {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba($color: $black, $alpha: .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+
+    &--active {
+        height: 100vh;
+        transition: .5s;
+    }
+}

@@ -1,0 +1,30 @@
+body {
+    font-family: Monseratt;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: grayscale;
+    font-size: rem(18px);
+
+    @include laptop {
+        font-size: rem(16px);
+    }
+
+
+}
+
+.body--without-scroll {
+    overflow: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: rem(1280px);
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}

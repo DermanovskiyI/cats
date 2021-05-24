@@ -1,0 +1,61 @@
+// colors
+
+$blue:#6EBBD3;
+$black: #1F2021;
+$red: #E52D2D;
+$white: #ffffff;
+$grey: #F3F3F3;
+
+
+// перевод в rem 
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+// breakpoint
+$laptop: 960px;
+$tablets: 779px;
+$phones: 540px;
+
+@mixin laptop {
+    @media(max-width:$laptop) {
+        @content;
+    }
+}
+
+
+@mixin tablets {
+    @media (max-width:$tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media (max-width:$phones) {
+        @content;
+    }
+}
+
+// normilize
+@import "./src/assets/styles/layout/normilize.scss";
+
+// layout
+@import "./src/assets/styles/layout/base.scss";
+@import "./src/assets/styles/layout/fonts.scss";
+
+//blocks
+@import "./src/assets/styles/blocks/header.scss";
+@import "./src/assets/styles/blocks/logo.scss";
+@import "./src/assets/styles/blocks/navigation.scss";
+@import "./src/assets/styles/blocks/contacts.scss";
+@import "./src/assets/styles/blocks/maincontent.scss";
+@import "./src/assets/styles/blocks/filter.scss";
+@import "./src/assets/styles/blocks/arrow.scss";
+@import "./src/assets/styles/blocks/cats.scss";
+@import "./src/assets/styles/blocks/cat.scss";
+@import "./src/assets/styles/blocks/scroll.scss";
+@import "./src/assets/styles/blocks/subscription.scss";
+@import "./src/assets/styles/blocks/form.scss";
+@import "./src/assets/styles/blocks/blue-btn.scss";
+@import "./src/assets/styles/blocks/hamburger.scss";
+@import "./src/assets/styles/blocks/popup.scss";

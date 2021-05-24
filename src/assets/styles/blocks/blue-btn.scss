@@ -1,0 +1,26 @@
+.blue-btn {
+    background-color: $blue;
+    border: none;
+    padding: rem(20px) rem(0px) rem(20px) rem(0px);
+    width: 100%;
+    color: $white;
+    font-weight: 700;
+    font-size: rem(16px);
+    cursor: pointer;
+    border-radius: rem(0px) rem(0px) rem(10px) rem(10px);
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: $black;
+        transition: background-color .3s;
+    }
+
+    &--form {
+        border-radius: rem(10px);
+        flex: 2;
+
+        &:hover {
+            background-color: #00b9f3;
+        }
+    }
+}

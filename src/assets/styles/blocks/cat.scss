@@ -1,0 +1,198 @@
+.cat {
+    background-color: $grey;
+    border-radius: rem(0px) rem(0px) rem(10px) rem(10px);
+
+    &__img {
+        position: relative;
+        margin-bottom: rem(29px);
+        display: flex;
+    }
+
+    &__img-pic {
+        max-width: 100%;
+    }
+
+    &__img-favorite {
+        position: absolute;
+        top: rem(20px);
+        right: rem(25px);
+        width: rem(46px);
+        height: rem(46px);
+        fill: $white;
+        opacity: .5;
+        transition: opacity .3s;
+        cursor: pointer;
+        max-width: 100%;
+
+        @include laptop {
+            width: rem(30px);
+            height: rem(30px);
+        }
+
+        @include tablets {
+            width: rem(20px);
+            height: rem(20px);
+            top: rem(10px);
+            right: rem(15px)
+        }
+
+    }
+
+    &__img-favorite:hover {
+        opacity: 1;
+        transition: opacity .3s;
+    }
+
+    &__img-favorite--added {
+        opacity: 1;
+    }
+
+    &__title {
+        margin-bottom: rem(20px);
+        font-weight: 700;
+        font-size: rem(24px);
+
+        @include laptop {
+            font-size: rem(20px);
+        }
+
+        @include tablets {
+            font-size: rem(16px);
+        }
+    }
+
+    &__desc {
+        font-size: rem(14px);
+        padding-left: rem(24px);
+        margin-bottom: rem(30px);
+
+        @include laptop {
+            padding-left: rem(10px);
+        }
+
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: rem(0px);
+            margin-bottom: rem(20px);
+        }
+    }
+
+    &__table {
+        display: flex;
+        position: relative;
+        padding-left: rem(20px);
+        margin-bottom: rem(25px);
+        align-items: center;
+
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+
+        }
+
+        @include phones {
+            padding: 0;
+
+        }
+    }
+
+    &__table::before {
+        content: "";
+        width: rem(4px);
+        height: 90%;
+        background-color: $blue;
+        position: absolute;
+        left: 0;
+
+        @include phones {
+            display: none;
+
+        }
+    }
+
+    &__color,
+    &__age {
+        margin-right: rem(20px);
+
+        @include tablets {
+            margin-right: rem(0px);
+            margin-bottom: rem(10px);
+        }
+
+    }
+
+    &__age,
+    &__paws {
+
+        @include phones {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__color {
+        max-width: rem(100px);
+        font-size: rem(12px);
+
+        @include tablets {
+            max-width: initial;
+        }
+
+        @include phones {
+            text-align: center;
+        }
+    }
+
+    &__age-header,
+    &__paws-header {
+        font-size: rem(12px);
+    }
+
+    &__age-text,
+    &__paws-text {
+        font-weight: 700;
+        font-size: rem(16px);
+    }
+
+    &__price {
+        font-size: rem(24px);
+        font-weight: 700;
+
+        @include laptop {
+            font-size: rem(20px);
+        }
+
+        @include tablets {
+            font-size: rem(18px);
+        }
+
+        @include phones {
+            font-size: rem(16px);
+        }
+
+    }
+
+    &__buy-btn {
+        background-color: $blue;
+        border: none;
+        padding: rem(20px) rem(0px) rem(20px) rem(0px);
+        width: 100%;
+        color: $white;
+        font-weight: 700;
+        font-size: rem(16px);
+        cursor: pointer;
+        border-radius: rem(0px) rem(0px) rem(10px) rem(10px);
+        transition: background-color .3s;
+    }
+
+    &__buy-btn:hover {
+        background-color: $black;
+        transition: background-color .3s;
+    }
+}
