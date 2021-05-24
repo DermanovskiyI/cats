@@ -445,6 +445,16 @@ body {
     font-size: 1.75rem;
   }
 }
+@media (max-width: 779px) {
+  .header__text {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 540px) {
+  .header__text {
+    font-size: 0.75rem;
+  }
+}
 
 .logo {
   margin-right: 7.5rem;
