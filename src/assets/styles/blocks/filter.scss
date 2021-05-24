@@ -7,8 +7,18 @@
         font-size: rem(16px);
     }
 
+    @include phones {
+        flex-direction: column;
+        font-size: rem(14px);
+    }
+
     &__text {
         margin-right: rem(48px);
+
+        @include phones {
+            margin-right: 0;
+            margin-bottom: rem(20px);
+        }
     }
 
     &__btns {
