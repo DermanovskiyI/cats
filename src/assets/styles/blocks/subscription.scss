@@ -5,7 +5,7 @@
         padding: rem(90px) rem(80px);
         background-color: $black;
 
-        @include phones {
+        @include laptop {
             flex-direction: column;
         }
     }
@@ -17,6 +17,7 @@
     }
 
     &__desc {
+        margin-right: rem(15px);
 
         @include laptop {
             display: flex;
@@ -24,10 +25,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-        }
-
-        @include phones {
-            margin-bottom: 20px;
+            margin-right: rem(0px);
+            margin-bottom: rem(20px);
         }
     }
 

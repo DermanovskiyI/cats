@@ -7,11 +7,8 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: rem(60px);
-
-        @media (max-width:1236px) {
-            justify-content: center;
-        }
 
         @include laptop {
             justify-content: space-around;
@@ -20,21 +17,22 @@
 
     &__item {
         margin-bottom: rem(27px);
-        margin-right: rem(20px);
+        width: calc(100% / 3 - 20px);
 
         @include laptop {
-            margin-right: rem(0px);
+            width: calc(100% / 2 - 20px);
         }
 
-        @include tablets {
-            width: 45%;
-            margin-bottom: rem(50px);
+        // @include tablets {
+        //     width: 45%;
+        //     margin-bottom: rem(50px);
+        // }
+
+        @include phones {
+            width: 100%;
         }
     }
 
-    // &__item:nth-child(2) {
-   //     margin-right: rem(0px);
-   // }
 
     &__more-btn {
         background-color: transparent;

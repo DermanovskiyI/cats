@@ -2,6 +2,10 @@
     background: url("/src/assets/images/header.png") center center /cover no-repeat;
     padding: rem(43px) rem(10px) rem(44px) rem(10px);
 
+    @include phones {
+        padding: rem(20px) rem(10px) rem(20px) rem(10px);
+    }
+
     &__rows {
         display: flex;
         flex-direction: column;
@@ -22,22 +26,17 @@
         }
     }
 
-    &__down {
-        @include laptop {
-            justify-content: center;
-        }
-    }
-
-    &__up-right,
-    &__up-left {
+    &__col {
         flex: 1;
         display: flex;
         align-items: center;
-    }
 
-    &__up-left {
-        @include laptop {
-            justify-content: space-between;
+        &--right {
+            justify-content: flex-end;
+
+            @include laptop {
+                display: none;
+            }
         }
     }
 
@@ -55,15 +54,15 @@
         font-weight: 700;
 
         @include laptop {
-            font-size: rem(28px);
+            font-size: rem(30px);
         }
 
         @include tablets {
-            font-size: rem(20px);
+            font-size: rem(23px);
         }
 
         @include phones {
-            font-size: rem(12px);
+            font-size: rem(18px);
         }
     }
 }

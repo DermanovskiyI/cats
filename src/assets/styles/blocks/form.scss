@@ -1,4 +1,10 @@
 .form {
+    @include laptop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     &__row {
         display: flex;
@@ -6,6 +12,12 @@
 
         @include laptop {
             flex-direction: column;
+            width: 45%;
+        }
+
+        @include phones {
+            flex-direction: column;
+            width: 65%;
         }
     }
 
@@ -21,7 +33,13 @@
         @include laptop {
             margin-right: rem(0px);
             margin-bottom: rem(20px);
-            padding: 20px 0;
+            padding: rem(16px) rem(0px);
+            text-indent: rem(10px);
+        }
+
+        @include phones {
+            padding: rem(12px) rem(0px);
+            font-size: rem(10px);
         }
     }
 

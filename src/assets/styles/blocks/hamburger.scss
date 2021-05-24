@@ -12,6 +12,11 @@
     &__menu::before {
         width: rem(44px);
         height: rem(5px);
+
+        @include phones {
+            width: rem(30px);
+            height: rem(4px);
+        }
     }
 
     &__menu {
@@ -35,6 +40,10 @@
         background: $white;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: rem(5px);
+
+        @include phones {
+            bottom: rem(10px);
+        }
     }
 
     &__menu::after {
@@ -45,6 +54,10 @@
         background: $white;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: rem(5px);
+
+        @include phones {
+            top: rem(10px);
+        }
     }
 
     &__menu--animated::after {

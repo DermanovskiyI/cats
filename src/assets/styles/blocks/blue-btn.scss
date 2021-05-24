@@ -19,6 +19,11 @@
         border-radius: rem(10px);
         flex: 2;
 
+        @include phones {
+            font-size: rem(12px);
+            padding: rem(15px) rem(0px) rem(15px) rem(0px);
+        }
+
         &:hover {
             background-color: #00b9f3;
         }

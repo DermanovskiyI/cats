@@ -13,9 +13,9 @@ $grey: #F3F3F3;
 }
 
 // breakpoint
-$laptop: 960px;
-$tablets: 779px;
-$phones: 540px;
+$laptop: 991px;
+$tablets: 767px;
+$phones: 575px;
 
 @mixin laptop {
     @media(max-width:$laptop) {

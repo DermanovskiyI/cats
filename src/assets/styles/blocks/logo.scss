@@ -10,5 +10,10 @@
         width: rem(78px);
         height: rem(52px);
         fill: $white;
+
+        @include phones {
+            width: rem(58px);
+            height: rem(32px);
+        }
     }
 }
