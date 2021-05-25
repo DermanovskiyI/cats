@@ -48,6 +48,36 @@
         opacity: 1;
     }
 
+    &__sale {
+        position: absolute;
+        top: rem(20px);
+        left: rem(25px);
+        background-color: #E52D2D;
+        width: rem(78px);
+        height: rem(39px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: rem(10px);
+        color: $white;
+
+        @include laptop {
+            width: rem(65px);
+            height: rem(35px);
+        }
+
+        @include tablets {
+            width: rem(60px);
+            height: rem(30px);
+        }
+
+        @include phones {
+            width: rem(50px);
+            height: rem(25px);
+            font-size: rem(14px);
+        }
+    }
+
     &__title {
         margin-bottom: rem(20px);
         font-weight: 700;
