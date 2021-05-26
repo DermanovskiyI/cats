@@ -313,3 +313,36 @@ document.addEventListener('scroll', () => {
     }
 
 })
+
+/// validation
+
+const subscriptionForm = document.querySelector('.form');
+const input = document.querySelector('.form__input');
+const btnSubmit = document.querySelector('.btn--form')
+
+
+
+btnSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    function validateForm(form) {
+        let valid = true;
+        if (!validateField(form.elements.email)) {
+            valid = false;
+        }
+        return valid;
+    }
+
+    function validateField(field) {
+        field.previousElementSibling.textContent = field.validationMessage;
+        return field.checkValidity();
+    }
+
+    if (validateForm(subscriptionForm)) {
+        alert('Подписка оформлена');
+        subscriptionForm.reset();
+        input.classList.remove('form__input--errored');
+    } else {
+        console.log('no')
+        input.classList.add('form__input--errored');
+    }
+})

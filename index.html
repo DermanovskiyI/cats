@@ -96,12 +96,13 @@
                     <div class="subscription__form">
                         <form action="POST" class="form">
                             <div class="form__row">
-                                <input type="email" class="form__input" placeholder="Email">
+                                <div class="error" id="errInput"></div>
+                                <input type="email" class="form__input" placeholder="Email" required name="email">
                                 <button type="submit" class="btn btn--form">Подписаться</button>
                             </div>
                             <div class="form__controll">
                                 <label for="agree" class="form__label">
-                                    <input type="checkbox" class="form__check" id="agree">
+                                    <input type="checkbox" class="form__check" id="agree" name="check" required>
                                     <div class="form__check-visible"></div>
                                     <div class="form__text">Подписаться на новости</div>
                                 </label>

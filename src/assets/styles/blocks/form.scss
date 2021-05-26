@@ -1,4 +1,5 @@
 .form {
+
     @include laptop {
         display: flex;
         flex-direction: column;
@@ -8,7 +9,7 @@
 
     &__row {
         display: flex;
-        margin-bottom: rem(24px);
+        margin-bottom: rem(30px);
 
         @include laptop {
             flex-direction: column;
@@ -29,6 +30,10 @@
         font-size: rem(14px);
         flex: 3;
         text-indent: rem(20px);
+
+        &--errored {
+            border-color: firebrick;
+        }
 
         @include laptop {
             margin-right: rem(0px);
@@ -60,6 +65,12 @@
         display: flex;
         cursor: pointer;
         align-items: center;
+        border: rem(1px) solid transparent;
+        padding: rem(3px);
+
+        &--errored {
+            border-color: firebrick;
+        }
     }
 
     &__check {

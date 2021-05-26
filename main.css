@@ -956,7 +956,7 @@ body {
 }
 .form__row {
   display: flex;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 @media (max-width: 991px) {
   .form__row {
@@ -978,6 +978,9 @@ body {
   font-size: 0.875rem;
   flex: 3;
   text-indent: 1.25rem;
+}
+.form__input--errored {
+  border-color: firebrick;
 }
 @media (max-width: 991px) {
   .form__input {
@@ -1009,6 +1012,11 @@ body {
   display: flex;
   cursor: pointer;
   align-items: center;
+  border: 0.0625rem solid transparent;
+  padding: 0.1875rem;
+}
+.form__label--errored {
+  border-color: firebrick;
 }
 .form__check {
   display: none;
@@ -1161,4 +1169,9 @@ body {
 .popup--active {
   height: 100vh;
   transition: 0.5s;
+}
+
+.error {
+  color: firebrick;
+  margin-bottom: 0.625rem;
 }
