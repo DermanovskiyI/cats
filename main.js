@@ -15,7 +15,7 @@ hamburger.addEventListener('click', function (e) {
 })
 //---------------------------------------------------------
 
-// sorting
+/// sorting by price
 
 
 let cats = [
@@ -86,13 +86,14 @@ let cats = [
         sold: true
     }
 ]
-//markup, handlebars
-
 
 const catsList = document.querySelector('.cats__list');
+const priceBtn = document.getElementById('price-btn');
+const priceArrow = document.getElementById('price-arrow');
+const ageBtn = document.getElementById('age-btn');
+const ageArrow = document.getElementById('age-arrow');
 
-
-function renderCats() {
+function renderCats(cats) {
     cats.forEach((item) => {
 
         const catsItem = document.createElement('li');
@@ -207,4 +208,89 @@ function renderCats() {
 
 }
 
-renderCats()
+renderCats(cats);
+
+function sortingFromCheap() {
+
+    cats.sort((a, b) => {
+        const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
+        const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
+
+        return priceA - priceB;
+
+
+    })
+    return cats
+
+}
+
+function sortingFromExpensive() {
+
+    cats.sort((a, b) => {
+        const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
+        const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
+
+        return priceB - priceA;
+
+
+    })
+    return cats
+
+}
+
+function clearList(catItems) {
+    for (let i = 0; i < catItems.length; i++) {
+        catsList.removeChild(catItems[i])
+    }
+}
+
+priceBtn.addEventListener('click', () => {
+    const catItems = document.querySelectorAll('.cats__item');
+    clearList(catItems);
+    if (priceArrow.classList.contains('arrow--up')) {
+        cats = sortingFromExpensive()
+        priceArrow.classList.remove('arrow--up');
+    } else {
+        cats = sortingFromCheap();
+        priceArrow.classList.add('arrow--up');
+    }
+    renderCats(cats);
+    ageArrow.classList.remove('arrow--up');
+})
+
+/// sort by age
+
+
+
+function sortingFromYounger() {
+    cats.sort((a, b) => {
+        const ageA = parseInt(a.age.replace(/[^0-9]/g, ''));
+        const ageB = parseInt(b.age.replace(/[^0-9]/g, ''));
+
+        return ageA - ageB;
+    })
+    return cats;
+}
+function sortingFromOlder() {
+    cats.sort((a, b) => {
+        const ageA = parseInt(a.age.replace(/[^0-9]/g, ''));
+        const ageB = parseInt(b.age.replace(/[^0-9]/g, ''));
+
+        return ageB - ageA;
+    })
+    return cats;
+}
+
+ageBtn.addEventListener('click', () => {
+    const catItems = document.querySelectorAll('.cats__item');
+    clearList(catItems);
+    if (ageArrow.classList.contains('arrow--up')) {
+        cats = sortingFromOlder()
+        ageArrow.classList.remove('arrow--up');
+    } else {
+        cats = sortingFromYounger();
+        ageArrow.classList.add('arrow--up');
+    }
+    renderCats(cats);
+    priceArrow.classList.remove('arrow--up');
+})

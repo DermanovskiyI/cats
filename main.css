@@ -550,6 +550,9 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
 }
+.contacts__phone:hover {
+  color: #E52D2D;
+}
 .contacts__text {
   font-size: 1.125rem;
 }
@@ -559,38 +562,38 @@ body {
   margin-bottom: 5rem;
 }
 
-.filter {
+.sort {
   display: flex;
   font-weight: 700;
 }
 @media (max-width: 991px) {
-  .filter {
+  .sort {
     justify-content: center;
     font-size: 1rem;
   }
 }
 @media (max-width: 575px) {
-  .filter {
+  .sort {
     flex-direction: column;
     font-size: 0.875rem;
   }
 }
-.filter__text {
+.sort__text {
   margin-right: 3rem;
 }
 @media (max-width: 575px) {
-  .filter__text {
+  .sort__text {
     margin-right: 0;
     margin-bottom: 1.25rem;
   }
 }
-.filter__btns {
+.sort__btns {
   display: flex;
 }
-.filter__price {
+.sort__price {
   margin-right: 3.125rem;
 }
-.filter__btn {
+.sort__btn {
   padding: 0;
   display: flex;
   align-items: center;
@@ -1027,6 +1030,7 @@ body {
 }
 .btn--sold {
   background-color: #1F2021;
+  cursor: initial;
 }
 .btn--white {
   background-color: transparent;

@@ -8,6 +8,10 @@
         margin-bottom: rem(15px);
         font-weight: 700;
         font-size: rem(24px);
+
+        &:hover {
+            color: #E52D2D;
+        }
     }
 
     &__text {
