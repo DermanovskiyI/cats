@@ -627,6 +627,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 3.75rem;
+  width: 100%;
 }
 @media (max-width: 991px) {
   .cats__list {
@@ -1008,7 +1009,7 @@ body {
           user-select: none;
 }
 
-.blue-btn {
+.btn {
   background-color: #6EBBD3;
   border: none;
   padding: 1.25rem 0rem 1.25rem 0rem;
@@ -1020,21 +1021,36 @@ body {
   border-radius: 0rem 0rem 0.625rem 0.625rem;
   transition: background-color 0.3s;
 }
-.blue-btn:hover {
+.btn:hover {
   background-color: #1F2021;
   transition: background-color 0.3s;
 }
-.blue-btn--form {
+.btn--sold {
+  background-color: #1F2021;
+}
+.btn--white {
+  background-color: transparent;
+  color: #1F2021;
+  border-radius: 0.625rem;
+  padding: 1.5rem 6.8125rem;
+  border: 0.0625rem solid #CACACA;
+  font-size: 0.875rem;
+}
+.btn--white:hover {
+  background-color: #6EBBD3;
+  color: #ffffff;
+}
+.btn--form {
   border-radius: 0.625rem;
   flex: 2;
 }
 @media (max-width: 575px) {
-  .blue-btn--form {
+  .btn--form {
     font-size: 0.75rem;
     padding: 0.9375rem 0rem 0.9375rem 0rem;
   }
 }
-.blue-btn--form:hover {
+.btn--form:hover {
   background-color: #00b9f3;
 }
 

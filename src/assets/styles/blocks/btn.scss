@@ -1,4 +1,4 @@
-.blue-btn {
+.btn {
     background-color: $blue;
     border: none;
     padding: rem(20px) rem(0px) rem(20px) rem(0px);
@@ -13,6 +13,24 @@
     &:hover {
         background-color: $black;
         transition: background-color .3s;
+    }
+
+    &--sold {
+        background-color: $black;
+    }
+
+    &--white {
+        background-color: transparent;
+        color: $black;
+        border-radius: rem(10px);
+        padding: rem(24px) rem(109px);
+        border: rem(1px) solid #CACACA;
+        font-size: rem(14px);
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
     }
 
     &--form {

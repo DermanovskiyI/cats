@@ -60,7 +60,7 @@
                     <div class="filter__text">Сортировать по:</div>
                     <div class="filter__btns">
                         <div class="filter__price">
-                            <button type="button" class="filter__btn">Цене
+                            <button type="button" class="filter__btn" id="price">Цене
                                 <svg class="arrow">
                                     <use xlink:href="./src/assets/images/sprite.svg#arrow"></use>
                                 </svg>
@@ -68,7 +68,7 @@
 
                         </div>
                         <div class="filter__age">
-                            <button type="button" class="filter__btn">Возрасту
+                            <button type="button" class="filter__btn" id="age">Возрасту
                                 <svg class="arrow">
                                     <use xlink:href="./src/assets/images/sprite.svg#arrow"></use>
                                 </svg>
@@ -78,201 +78,10 @@
                 </div>
                 <div class="cats">
                     <ul class="cats__list">
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat1.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                    <div class="cat__sale">
-                                        <div class="cat__sale-text">-40%</div>
-                                    </div>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <p class="cat__title-text">Кот полосатый</p>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
 
-                                    </div>
-                                    <div class="cat__price">30 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Купить</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat2.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <span class="cat__title-text">Кот полосатый</span>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cat__price">40 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Купить</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat3.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <span class="cat__title-text">Кот полосатый</span>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cat__price">20 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Купить</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat1.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <span class="cat__title-text">Кот полосатый</span>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cat__price">25 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Купить</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat2.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                    <div class="cat__sale">
-                                        <div class="cat__sale-text">-40%</div>
-                                    </div>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <span class="cat__title-text">Кот полосатый</span>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cat__price">30 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Купить</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cats__item">
-                            <div class="cat">
-                                <div class="cat__img">
-                                    <img src="/src/assets/images/cat3.png" alt="cat" class="cat__img-pic">
-                                    <svg class="cat__img-favorite">
-                                        <use xlink:href="./src/assets/images/sprite.svg#like"></use>
-                                    </svg>
-                                </div>
-                                <div class="cat__desc">
-                                    <div class="cat__title">
-                                        <span class="cat__title-text">Кот полосатый</span>
-                                    </div>
-                                    <div class="cat__table">
-                                        <div class="cat__color">Коричневый окрас</div>
-                                        <div class="cat__age">
-                                            <div class="cat__age-text">2 мес.</div>
-                                            <div class="cat__age-header">Возраст</div>
-                                        </div>
-                                        <div class="cat__paws">
-                                            <div class="cat__paws-text">4</div>
-                                            <div class="cat__paws-header">Кол-во лап</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cat__price">10 000 руб.</div>
-                                </div>
-                                <div class="cat__buy">
-                                    <button type="button" class="blue-btn">Продан</button>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                     <div class="cats__more">
-                        <button type="button" class="cats__more-btn">Показать еще 20</button>
+                        <button type="button" class="btn btn--white">Показать еще 20</button>
                     </div>
                 </div>
             </div>
@@ -288,7 +97,7 @@
                         <form action="POST" class="form">
                             <div class="form__row">
                                 <input type="email" class="form__input" placeholder="Email">
-                                <button type="submit" class="blue-btn blue-btn--form">Подписаться</button>
+                                <button type="submit" class="btn btn--form">Подписаться</button>
                             </div>
                             <div class="form__controll">
                                 <label for="agree" class="form__label">

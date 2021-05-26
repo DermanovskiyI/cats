@@ -9,6 +9,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: rem(60px);
+        width: 100%;
 
         @include laptop {
             justify-content: space-around;
