@@ -24,11 +24,6 @@
             width: calc(100% / 2 - 20px);
         }
 
-        // @include tablets {
-        //     width: 45%;
-        //     margin-bottom: rem(50px);
-        // }
-
         @include phones {
             width: 100%;
         }

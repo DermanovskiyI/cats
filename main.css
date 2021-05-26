@@ -487,6 +487,9 @@ body {
   }
 }
 
+.navigation--popup {
+  height: 100%;
+}
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
@@ -873,11 +876,18 @@ body {
   top: 90%;
   right: 1%;
   cursor: pointer;
-  transition: background-color 0.3s;
+  opacity: 0.5;
+  transition: background-color, opacity, height 0.3s;
 }
 .scroll:hover {
   background-color: #00b9f3;
-  transition: background-color 0.3s;
+  opacity: 1;
+  transition: background-color, opacity 0.3s;
+}
+.scroll--hidden {
+  height: 0;
+  transition: height 0.3s;
+  overflow: hidden;
 }
 
 .subscription__wrap {

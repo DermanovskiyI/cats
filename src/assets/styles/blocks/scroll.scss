@@ -9,10 +9,18 @@
     top: 90%;
     right: 1%;
     cursor: pointer;
-    transition: background-color .3s;
+    opacity: .5;
+    transition: background-color, opacity, height .3s;
 
     &:hover {
         background-color: #00b9f3;
-        transition: background-color .3s;
+        opacity: 1;
+        transition: background-color, opacity .3s;
+    }
+
+    &--hidden {
+        height: 0;
+        transition: height .3s;
+        overflow: hidden;
     }
 }

@@ -11,7 +11,6 @@ hamburger.addEventListener('click', function (e) {
         popup.classList.toggle('popup--active');
         body.classList.toggle('body--without-scroll');
     }
-
 })
 //---------------------------------------------------------
 
@@ -118,7 +117,7 @@ function renderCats(cats) {
         catImg.appendChild(catFavorite)
 
         const likeIcon = document.createElement('img');
-        likeIcon.setAttribute('src', './src/assets/images/like1.png');
+        likeIcon.setAttribute('src', './src/assets/images/like.png');
         catFavorite.appendChild(likeIcon);
 
         const catSale = document.createElement('div');
@@ -260,8 +259,6 @@ priceBtn.addEventListener('click', () => {
 
 /// sort by age
 
-
-
 function sortingFromYounger() {
     cats.sort((a, b) => {
         const ageA = parseInt(a.age.replace(/[^0-9]/g, ''));
@@ -293,4 +290,26 @@ ageBtn.addEventListener('click', () => {
     }
     renderCats(cats);
     priceArrow.classList.remove('arrow--up');
+})
+
+/// scrolling
+
+const scrollBtn = document.getElementById('scroll-btn');
+
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+})
+document.addEventListener('scroll', () => {
+    const currentCoords = window.pageYOffset;
+    const coordWhileShowBtn = 100;
+    if (currentCoords > coordWhileShowBtn) {
+        scrollBtn.classList.remove('scroll--hidden');
+    } else {
+        scrollBtn.classList.add('scroll--hidden');
+    }
+
 })
