@@ -890,6 +890,16 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 767px) {
+  .subscription__wrap {
+    padding: 3.75rem 2.8125rem;
+  }
+}
+@media (max-width: 575px) {
+  .subscription__wrap {
+    padding: 2.5rem 1.25rem;
+  }
+}
 .subscription__desc, .subscription__form {
   flex: 1;
   color: #ffffff;
