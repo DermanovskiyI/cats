@@ -118,6 +118,7 @@ function renderCats(cats) {
 
         const likeIcon = document.createElement('img');
         likeIcon.setAttribute('src', './src/assets/images/like.png');
+        likeIcon.classList.add('cat__img-favorite-pic');
         catFavorite.appendChild(likeIcon);
 
         const catSale = document.createElement('div');
@@ -317,9 +318,8 @@ document.addEventListener('scroll', () => {
 /// validation
 
 const subscriptionForm = document.querySelector('.form');
-const input = document.querySelector('.form__input');
 const btnSubmit = document.querySelector('.btn--form')
-
+const input = document.querySelector('.form__input');
 
 
 btnSubmit.addEventListener('click', (e) => {
@@ -342,7 +342,15 @@ btnSubmit.addEventListener('click', (e) => {
         subscriptionForm.reset();
         input.classList.remove('form__input--errored');
     } else {
-        console.log('no')
         input.classList.add('form__input--errored');
     }
 })
+
+
+/// show modal
+
+const likeBtn = document.querySelector('.cat__img-favorite');
+
+// likeBtn.addEventListener('click', () => {
+//     openOverLay();
+// })

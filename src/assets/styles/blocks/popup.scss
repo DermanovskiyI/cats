@@ -8,6 +8,9 @@
     right: 0;
     bottom: 0;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &--active {
         height: 100vh;

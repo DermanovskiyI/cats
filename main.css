@@ -487,9 +487,6 @@ body {
   }
 }
 
-.navigation--popup {
-  height: 100%;
-}
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
@@ -713,6 +710,9 @@ body {
 }
 .cat__img-favorite--added {
   opacity: 1;
+}
+.cat__img-favorite-pic {
+  max-width: 100%;
 }
 .cat__sale {
   position: absolute;
@@ -1165,6 +1165,9 @@ body {
   right: 0;
   bottom: 0;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .popup--active {
   height: 100vh;

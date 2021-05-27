@@ -48,6 +48,10 @@
         opacity: 1;
     }
 
+    &__img-favorite-pic {
+        max-width: 100%;
+    }
+
     &__sale {
         position: absolute;
         top: rem(20px);
