@@ -1,0 +1,21 @@
+.modal {
+    position: fixed;
+    top: 25%;
+    right: 3%;
+    background-color: $blue;
+    border-radius: rem(5px);
+    color: $white;
+    padding: 25px;
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        bottom: 110%;
+        right: -8%;
+        color: firebrick;
+        font-weight: 700;
+    }
+}

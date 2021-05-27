@@ -1178,3 +1178,23 @@ body {
   color: firebrick;
   margin-bottom: 0.625rem;
 }
+
+.modal {
+  position: fixed;
+  top: 25%;
+  right: 3%;
+  background-color: #6EBBD3;
+  border-radius: 0.3125rem;
+  color: #ffffff;
+  padding: 25px;
+}
+.modal__wrap {
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  bottom: 110%;
+  right: -8%;
+  color: firebrick;
+  font-weight: 700;
+}

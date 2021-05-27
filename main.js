@@ -349,8 +349,58 @@ btnSubmit.addEventListener('click', (e) => {
 
 /// show modal
 
-const likeBtn = document.querySelector('.cat__img-favorite');
+const template = document.getElementById('modal').innerHTML;
+const modal = createOverlay(template);
+const likeBtn = document.querySelectorAll('.cat__img-favorite');
 
-// likeBtn.addEventListener('click', () => {
-//     openOverLay();
-// })
+function createOverlay(template) {
+    let fragment = document.createElement('div');
+    fragment.innerHTML = template;
+    const modalElement = fragment.querySelector(".modal");
+    const closeElement = fragment.querySelector(".modal__close");
+
+    fragment = null;
+
+    modalElement.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (e.target === modalElement) {
+            closeElement.click();
+        }
+    });
+
+    closeElement.addEventListener('click', (e) => {
+        e.preventDefault();
+        body.removeChild(modalElement);
+
+    });
+
+    return {
+        open() {
+            body.appendChild(modalElement);
+            setTimeout(() => {
+                this.close()
+            }, 2000);
+        },
+
+        close() {
+            closeElement.click();
+        },
+
+    };
+}
+
+function addToFavorite() {
+    for (let i = 0; i < likeBtn.length; i++) {
+        likeBtn[i].addEventListener('click', () => {
+            if (likeBtn[i].classList.contains('cat__img-favorite--added')) {
+                likeBtn[i].classList.remove('cat__img-favorite--added');
+                modal.close();
+            } else {
+                likeBtn[i].classList.toggle('cat__img-favorite--added');
+                modal.open();
+            }
+        })
+    }
+}
+addToFavorite();
+
