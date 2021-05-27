@@ -1,3 +1,5 @@
+// import './src/assets/scripts/hamburger.js'
+
 //HAMBURGER
 
 const hamburger = document.querySelector('.hamburger');
@@ -93,6 +95,8 @@ const ageBtn = document.getElementById('age-btn');
 const ageArrow = document.getElementById('age-arrow');
 
 function renderCats(cats) {
+    catsList.innerHTML = "";
+
     cats.forEach((item) => {
 
         const catsItem = document.createElement('li');
@@ -238,15 +242,8 @@ function sortingFromExpensive() {
 
 }
 
-function clearList(catItems) {
-    for (let i = 0; i < catItems.length; i++) {
-        catsList.removeChild(catItems[i])
-    }
-}
 
 priceBtn.addEventListener('click', () => {
-    const catItems = document.querySelectorAll('.cats__item');
-    clearList(catItems);
     if (priceArrow.classList.contains('arrow--up')) {
         cats = sortingFromExpensive()
         priceArrow.classList.remove('arrow--up');
@@ -281,8 +278,6 @@ function sortingFromOlder() {
 }
 
 ageBtn.addEventListener('click', () => {
-    const catItems = document.querySelectorAll('.cats__item');
-    clearList(catItems);
     if (ageArrow.classList.contains('arrow--up')) {
         cats = sortingFromOlder()
         ageArrow.classList.remove('arrow--up');
@@ -348,33 +343,18 @@ btnSubmit.addEventListener('click', (e) => {
     }
 })
 
-
 /// show modal
 
 const template = document.getElementById('modal').innerHTML;
 const modal = createOverlay(template);
-// const likeBtn = document.querySelectorAll('.cat__img-favorite');
 
 function createOverlay(template) {
     let fragment = document.createElement('div');
     fragment.innerHTML = template;
     const modalElement = fragment.querySelector(".modal");
-    const closeElement = fragment.querySelector(".modal__close");
 
     fragment = null;
 
-    modalElement.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (e.target === modalElement) {
-            closeElement.click();
-        }
-    });
-
-    closeElement.addEventListener('click', (e) => {
-        e.preventDefault();
-        body.removeChild(modalElement);
-
-    });
 
     return {
         open() {
@@ -385,9 +365,8 @@ function createOverlay(template) {
         },
 
         close() {
-            closeElement.click();
+            body.removeChild(modalElement);
         },
-
     };
 }
 
@@ -397,10 +376,9 @@ function addToFavorite() {
         likeBtn[i].addEventListener('click', () => {
             if (likeBtn[i].classList.contains('cat__img-favorite--added')) {
                 likeBtn[i].classList.remove('cat__img-favorite--added');
-                modal.close();
             } else {
-                likeBtn[i].classList.toggle('cat__img-favorite--added');
                 modal.open();
+                likeBtn[i].classList.add('cat__img-favorite--added');
             }
         })
     }

@@ -1,4 +1,4 @@
-// console.log('ok');
+export console.log('ok');
 
 // const hamburger = document.querySelector('.hamburger');
 // const hamburgerMenu = document.querySelector('.hamburger__menu');
@@ -13,3 +13,4 @@
 //     }
 
 // })
+export

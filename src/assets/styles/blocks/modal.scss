@@ -5,17 +5,6 @@
     background-color: $blue;
     border-radius: rem(5px);
     color: $white;
-    padding: 25px;
+    padding: 15px;
 
-    &__wrap {
-        position: relative;
-    }
-
-    &__close {
-        position: absolute;
-        bottom: 110%;
-        right: -8%;
-        color: firebrick;
-        font-weight: 700;
-    }
 }
