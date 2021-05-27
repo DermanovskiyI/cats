@@ -256,6 +256,7 @@ priceBtn.addEventListener('click', () => {
     }
     renderCats(cats);
     ageArrow.classList.remove('arrow--up');
+    addToFavorite();
 })
 
 /// sort by age
@@ -291,6 +292,7 @@ ageBtn.addEventListener('click', () => {
     }
     renderCats(cats);
     priceArrow.classList.remove('arrow--up');
+    addToFavorite();
 })
 
 /// scrolling
@@ -351,7 +353,7 @@ btnSubmit.addEventListener('click', (e) => {
 
 const template = document.getElementById('modal').innerHTML;
 const modal = createOverlay(template);
-const likeBtn = document.querySelectorAll('.cat__img-favorite');
+// const likeBtn = document.querySelectorAll('.cat__img-favorite');
 
 function createOverlay(template) {
     let fragment = document.createElement('div');
@@ -390,6 +392,7 @@ function createOverlay(template) {
 }
 
 function addToFavorite() {
+    const likeBtn = document.querySelectorAll('.cat__img-favorite')
     for (let i = 0; i < likeBtn.length; i++) {
         likeBtn[i].addEventListener('click', () => {
             if (likeBtn[i].classList.contains('cat__img-favorite--added')) {
