@@ -1,4 +1,12 @@
 .maincontent {
     padding: rem(45px) rem(10px) rem(0px) rem(10px);
     margin-bottom: rem(80px);
+
+    @include tablets {
+        margin-bottom: rem(70px);
+    }
+
+    @include phones {
+        margin-bottom: rem(60px);
+    }
 }

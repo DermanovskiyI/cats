@@ -6,6 +6,10 @@
         display: block;
     }
 
+    @include phones {
+        margin-top: rem(-10px);
+    }
+
     &__menu,
     &__menu::after,
     &__menu::before {

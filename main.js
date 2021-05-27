@@ -1,5 +1,3 @@
-// import './src/assets/scripts/hamburger.js'
-
 //HAMBURGER
 
 const hamburger = document.querySelector('.hamburger');
